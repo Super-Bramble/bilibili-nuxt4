@@ -12,9 +12,10 @@ export default defineNuxtConfig({
   app: {
     // 设置 seo ，会设置到 html 的 head 里面
     head: {
-      title: "Nuxt 4",
+      title: "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
       meta: [
-        { name: "description", content: "Nuxt 4" },
+        { name: "description", content: "哔哩哔哩（bilibili.com)是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。" },
+        { name: "keywords", content: "哔哩哔哩,bilibili,动漫,游戏,音乐,舞蹈,科技,生活,鬼畜,时尚,娱乐,影视,直播,UP主,番剧,国创,原创,官方,更多" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
     },
