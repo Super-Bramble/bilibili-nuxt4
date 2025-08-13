@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   // 是否开启服务端渲染,默认开启
   ssr: true, 
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  modules: ['@unocss/nuxt', '@nuxt/icon','@pinia/nuxt'],
+  devtools: { enabled: true },  // 开启调试工具
+  modules: ['@unocss/nuxt', '@nuxt/icon','@pinia/nuxt','@vant/nuxt'],
   // 防止 nuxt icon 请求出错
   icon: {
     localApiEndpoint: '/nuxt-icon',
@@ -35,5 +35,5 @@ export default defineNuxtConfig({
     // },
   },
   // 全局样式文件入口
-  css: ["~/assets/index.css"],
+  css: ["~/assets/global.css"],
 })
