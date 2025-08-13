@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { showSuccessToast, showFailToast } from "vant";
 import { reactive, ref } from "vue";
+import { showSuccessToast, showFailToast } from 'vant'
 
-const emit = defineEmits(["success", "close"]);
+const emit = defineEmits(["success", "close", "register"]);
 
 // 表单数据
 const form = reactive({
@@ -18,23 +18,7 @@ const onClose = () => {
 
 // 表单提交
 const onSubmit = async () => {
-  if (isSubmitting.value) return;
-  isSubmitting.value = true;
-  try {
-    const res = await $fetch("/api/login", {
-      method: "POST",
-      body: form,
-    });
-    const token = useCookie<string | null>("token");
-    // @ts-ignore
-    token.value = (res as any)?.token ?? "mock-token";
-    showSuccessToast("登录成功");
-    emit("success");
-  } catch (err: any) {
-    showFailToast(err?.data?.message ?? "登录失败");
-  } finally {
-    isSubmitting.value = false;
-  }
+  
 };
 </script>
 
@@ -45,6 +29,7 @@ const onSubmit = async () => {
     <div class="flex items-center justify-between mb-5">
       <van-nav-bar title="用户登录" left-arrow @click-left="onClose" />
     </div>
+
     <!-- 一旦form表单提交了，就会触发submit，可以在submit事件中
          根据拿到的表单提交信息，发送axios请求
      -->
@@ -82,10 +67,11 @@ const onSubmit = async () => {
         >
       </div>
     </van-form>
-    <NuxtLink
-      to="/register"
+    <a
+      href="#"
+      @click.prevent="emit('register')"
       class="block text-center mt-4 text-[#fb7299] hover:text-[#f95a86]"
-      >注册账号</NuxtLink
+      >注册账号</a
     >
   </div>
 </template>
