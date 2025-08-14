@@ -1,0 +1,36 @@
+/* 显示定义样式优先级，用于覆盖 vant 定义的样式变量 */
+/* https://vant-ui.github.io/vant/#/zh-CN/config-provider */
+:root:root {
+  --van-primary-color: #fb7299;
+}
+
+/* 登录弹窗弹出动画 */
+@keyframes popup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-popup {
+  animation: popup 0.3s ease-out;
+}
+
+/* AppVideo 默认卡片背景图大小 */
+.card-bg-default {
+  background-image: url('/assets/images/default.png');
+  background-size: 36%;
+}
+
+/* 多行省略（2行） - 作为兜底，优先使用 Uno 的 line-clamp-2 工具类 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
