@@ -19,6 +19,6 @@ useSeoMeta({
 
 <style lang="scss">
 // 全局样式gloabl.css的注入放在了nuxt.config.ts中国呢
-@import '@unocss/reset/tailwind.css';
-@import './assets/iconfont.scss';
+@use '@unocss/reset/tailwind.css';
+@use './assets/iconfont.scss';
 </style>

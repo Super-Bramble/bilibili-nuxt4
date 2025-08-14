@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
-import { showSuccessToast, showFailToast } from 'vant'
 
 const emit = defineEmits(["success", "close", "register"]);
 
 // 表单数据
 const form = reactive({
-  username: "itheima",
+  username: "Furīren",
   password: "123456",
 });
 
@@ -17,18 +16,14 @@ const onClose = () => {
 };
 
 // 表单提交
-const onSubmit = async () => {
-  
-};
+const onSubmit = async () => {};
 </script>
 
 <template>
   <div
     class="relative w-[90%] max-w-[400px] bg-white rounded-xl p-6 shadow-lg animate-popup"
   >
-    <div class="flex items-center justify-between mb-5">
-      <van-nav-bar title="用户登录" left-arrow @click-left="onClose" />
-    </div>
+    <van-nav-bar title="用户登录" left-arrow @click-left="onClose" />
 
     <!-- 一旦form表单提交了，就会触发submit，可以在submit事件中
          根据拿到的表单提交信息，发送axios请求

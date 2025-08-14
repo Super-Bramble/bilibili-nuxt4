@@ -13,11 +13,11 @@
       </div>
       <div class="text-white absolute bottom-0 left-0 right-0 text-[12px] flex items-center justify-between px-[6px] py-[5px] bg-gradient-to-t from-black/85 to-transparent">
         <span>
-          <i class="iconfont icon_shipin_bofangshu text-[12px]"></i>
+          <i class="iconfont icon_shipin_bofangshu text-[8px]"></i>
           {{ item.stat.view }}
         </span>
         <span>
-          <i class="iconfont icon_shipin_danmushu text-[12px]"></i>
+          <i class="iconfont icon_shipin_danmushu text-[8px]"></i>
           {{ item.stat.danmaku }}
         </span>
       </div>
